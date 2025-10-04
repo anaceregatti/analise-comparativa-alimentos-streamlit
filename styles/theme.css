@@ -482,69 +482,49 @@
     color: white;
 }
 
-/* === CHIPS RESPONSIVAS === */
-.chips-container {
-    width: 100%;
-    margin: 1rem 0;
-}
-
-.chips-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-/* Estilo para botões de chips responsivos */
-.chips-flex .stButton {
-    flex: 0 0 auto;
-    min-width: 0;
-    margin: 0.2rem;
-}
-
-.chips-flex .stButton > button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    text-align: center;
-    min-width: fit-content;
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 0;
+/* === CHIPS RESPONSIVAS - LAYOUT 3 LINHAS === */
+/* Estilo para botões de chips em layout de colunas */
+.stButton > button {
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem !important;
+    margin: 0.1rem !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    min-height: 2.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 /* Cores para chips não selecionadas */
-.chips-flex .stButton > button[data-testid*="secondary"] {
+.stButton > button[data-testid*="secondary"] {
     background: linear-gradient(45deg, #e9ecef, #f8f9fa) !important;
     color: #495057 !important;
     border: 1px solid #dee2e6 !important;
 }
 
 /* Cores para chips selecionadas */
-.chips-flex .stButton > button[data-testid*="primary"] {
+.stButton > button[data-testid*="primary"] {
     background: linear-gradient(45deg, #667eea, #764ba2) !important;
     color: white !important;
     border: 1px solid #667eea !important;
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 3px 8px rgba(102, 126, 234, 0.3);
 }
 
-.chips-flex .stButton > button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.stButton > button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-.chips-flex .stButton > button[data-testid*="primary"]:hover {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+.stButton > button[data-testid*="primary"]:hover {
+    transform: scale(1.02) translateY(-1px);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
 }
 
 /* Responsividade para chips */
@@ -552,8 +532,8 @@
     .chips-flex {
         gap: 0.4rem;
     }
-    
-    .chips-flex .stButton > button {
+
+    .chips-flex .stButton>button {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
         margin: 0.15rem;
@@ -564,8 +544,8 @@
     .chips-flex {
         gap: 0.3rem;
     }
-    
-    .chips-flex .stButton > button {
+
+    .chips-flex .stButton>button {
         padding: 0.35rem 0.7rem;
         font-size: 0.75rem;
         margin: 0.1rem;
@@ -578,8 +558,8 @@
         gap: 0.25rem;
         justify-content: center;
     }
-    
-    .chips-flex .stButton > button {
+
+    .chips-flex .stButton>button {
         padding: 0.3rem 0.6rem;
         font-size: 0.7rem;
         margin: 0.1rem;
@@ -593,8 +573,8 @@
         gap: 0.2rem;
         justify-content: center;
     }
-    
-    .chips-flex .stButton > button {
+
+    .chips-flex .stButton>button {
         padding: 0.25rem 0.5rem;
         font-size: 0.65rem;
         margin: 0.05rem;
@@ -608,13 +588,30 @@
         gap: 0.15rem;
         justify-content: center;
     }
-    
-    .chips-flex .stButton > button {
+
+    .chips-flex .stButton>button {
         padding: 0.2rem 0.4rem;
         font-size: 0.6rem;
         margin: 0.05rem;
         max-width: 90px;
         min-width: 60px;
+    }
+}
+
+/* Responsividade para chips - layout 3 linhas */
+@media (max-width: 768px) {
+    .stButton > button {
+        font-size: 0.7rem !important;
+        padding: 0.3rem 0.6rem !important;
+        min-height: 2.2rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .stButton > button {
+        font-size: 0.65rem !important;
+        padding: 0.25rem 0.5rem !important;
+        min-height: 2rem !important;
     }
 }
 

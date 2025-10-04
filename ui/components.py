@@ -96,34 +96,38 @@ def food_card(df_row, food_name, slot='left'):
 
 def chips_grid(groups, slot):
     """
-    Renderiza chips de grupos com layout responsivo
+    Renderiza chips de grupos com layout responsivo em até 3 linhas
     """
     from ui.state import get_selected_groups, toggle_group, StateKeys
     
     selected_groups = get_selected_groups(slot)
     
-    # Container responsivo para chips
-    st.markdown(f"""
-    <div class="chips-container" data-slot="{slot}">
-        <div class="chips-flex">
-    """, unsafe_allow_html=True)
+    # Calcular número de colunas baseado no número de grupos
+    # Máximo 3 linhas, então dividir grupos por 3
+    num_groups = len(groups)
+    cols_per_row = max(1, (num_groups + 2) // 3)  # Arredondar para cima
     
-    # Renderizar chips usando st.button com CSS responsivo
-    for group in groups:
-        is_selected = group in selected_groups
-        if st.button(
-            group, 
-            key=StateKeys.get_chip_key(slot, group),
-            type="primary" if is_selected else "secondary",
-            use_container_width=False
-        ):
-            toggle_group(slot, group)
-            st.rerun()
-    
-    st.markdown("""
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    # Criar até 3 linhas de chips
+    for row in range(min(3, (num_groups + cols_per_row - 1) // cols_per_row)):
+        start_idx = row * cols_per_row
+        end_idx = min(start_idx + cols_per_row, num_groups)
+        row_groups = groups[start_idx:end_idx]
+        
+        if row_groups:
+            # Criar colunas para esta linha
+            cols = st.columns(len(row_groups))
+            
+            for i, group in enumerate(row_groups):
+                with cols[i]:
+                    is_selected = group in selected_groups
+                    if st.button(
+                        group, 
+                        key=StateKeys.get_chip_key(slot, group),
+                        type="primary" if is_selected else "secondary",
+                        use_container_width=True
+                    ):
+                        toggle_group(slot, group)
+                        st.rerun()
 
 def section_selector(available_sections):
     """
