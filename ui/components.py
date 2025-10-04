@@ -96,25 +96,34 @@ def food_card(df_row, food_name, slot='left'):
 
 def chips_grid(groups, slot):
     """
-    Renderiza chips de grupos em grid 6 por linha
+    Renderiza chips de grupos com layout responsivo
     """
     from ui.state import get_selected_groups, toggle_group, StateKeys
     
     selected_groups = get_selected_groups(slot)
     
-    # Criar grid de chips
-    cols = st.columns(6)
-    for i, group in enumerate(groups):
-        col_idx = i % 6
-        with cols[col_idx]:
-            is_selected = group in selected_groups
-            if st.button(
-                group, 
-                key=StateKeys.get_chip_key(slot, group),
-                type="primary" if is_selected else "secondary"
-            ):
-                toggle_group(slot, group)
-                st.rerun()
+    # Container responsivo para chips
+    st.markdown(f"""
+    <div class="chips-container" data-slot="{slot}">
+        <div class="chips-flex">
+    """, unsafe_allow_html=True)
+    
+    # Renderizar chips usando st.button com CSS responsivo
+    for group in groups:
+        is_selected = group in selected_groups
+        if st.button(
+            group, 
+            key=StateKeys.get_chip_key(slot, group),
+            type="primary" if is_selected else "secondary",
+            use_container_width=False
+        ):
+            toggle_group(slot, group)
+            st.rerun()
+    
+    st.markdown("""
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 def section_selector(available_sections):
     """
