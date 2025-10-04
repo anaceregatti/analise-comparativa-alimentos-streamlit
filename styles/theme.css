@@ -1,0 +1,500 @@
+/* Tema personalizado para a aplicação Streamlit */
+
+.main-header {
+    text-align: center;
+    padding: 1rem 0;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.food-card {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    margin-bottom: 1rem;
+}
+
+.food-name {
+    color: #2E3440;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.food-group {
+    color: #667eea;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.metric-card {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.chart-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.table-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stSelectbox>div>div {
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Corrigir cor do texto nos campos de seleção */
+.stSelectbox>div>div>div {
+    color: #262730 !important;
+}
+
+.stSelectbox input {
+    color: #262730 !important;
+}
+
+.stSelectbox [data-baseweb="select"] {
+    color: #262730 !important;
+}
+
+.stSelectbox [data-baseweb="select"]>div {
+    color: #262730 !important;
+}
+
+.stSelectbox [data-baseweb="select"] input {
+    color: #262730 !important;
+}
+
+.stDataFrame {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100% !important;
+}
+
+.stDataFrame table {
+    width: 100% !important;
+}
+
+/* Forçar largura total para tabelas de frações */
+.table-container .stDataFrame {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.table-container .stDataFrame table {
+    width: 100% !important;
+    table-layout: auto;
+}
+
+/* CSS simplificado para todas as tabelas - 1/3 cada coluna */
+.stDataFrame {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.stDataFrame table {
+    width: 100% !important;
+    table-layout: fixed !important;
+}
+
+/* Todas as colunas com 1/3 (33.33%) - responsivo */
+.stDataFrame table th:nth-child(1),
+.stDataFrame table th:nth-child(2),
+.stDataFrame table th:nth-child(3),
+.stDataFrame table td:nth-child(1),
+.stDataFrame table td:nth-child(2),
+.stDataFrame table td:nth-child(3) {
+    width: 33.33% !important;
+}
+
+/* Primeira coluna - alinhamento à esquerda */
+.stDataFrame table th:nth-child(1),
+.stDataFrame table td:nth-child(1) {
+    text-align: left !important;
+}
+
+/* Colunas de alimentos - centralizadas */
+.stDataFrame table th:nth-child(2),
+.stDataFrame table th:nth-child(3),
+.stDataFrame table td:nth-child(2),
+.stDataFrame table td:nth-child(3) {
+    text-align: center !important;
+}
+
+/* Estilo para chips de grupos alimentares */
+.group-chip {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.group-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Cores específicas para cada grupo */
+.chip-amilaceo {
+    background: linear-gradient(45deg, #FF6B6B, #FF8E8E);
+}
+
+.chip-bebida {
+    background: linear-gradient(45deg, #4ECDC4, #6ED5CD);
+}
+
+.chip-cereal {
+    background: linear-gradient(45deg, #45B7D1, #6BC5D8);
+}
+
+.chip-condimento {
+    background: linear-gradient(45deg, #96CEB4, #A8D5C4);
+}
+
+.chip-diversos {
+    background: linear-gradient(45deg, #FFEAA7, #FFF0C7);
+    color: #333;
+}
+
+.chip-doce {
+    background: linear-gradient(45deg, #DDA0DD, #E6B8E6);
+}
+
+.chip-fruta {
+    background: linear-gradient(45deg, #98D8C8, #A8E0D0);
+}
+
+.chip-laticinio {
+    background: linear-gradient(45deg, #F7DC6F, #F9E79F);
+    color: #333;
+}
+
+.chip-legume {
+    background: linear-gradient(45deg, #85C1E9, #9BC9ED);
+}
+
+.chip-leguminosa {
+    background: linear-gradient(45deg, #F8C471, #FAD7A0);
+    color: #333;
+}
+
+.chip-oleaginosa {
+    background: linear-gradient(45deg, #BB8FCE, #C9A3D8);
+}
+
+.chip-oleo {
+    background: linear-gradient(45deg, #F1948A, #F5A8A0);
+}
+
+.chip-ovo {
+    background: linear-gradient(45deg, #F9E79F, #FCF3CF);
+    color: #333;
+}
+
+.chip-verdura {
+    background: linear-gradient(45deg, #A9DFBF, #B8E6C7);
+}
+
+.chip-varios {
+    background: linear-gradient(45deg, #D5DBDB, #E5E8E8);
+    color: #333;
+}
+
+/* Estilo para chips selecionados */
+.group-chip.selected {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: 2px solid #fff;
+}
+
+.group-chip {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Estilo para botões de grupos alimentares */
+.stButton>button {
+    border-radius: 20px !important;
+    font-weight: bold !important;
+    font-size: 12px !important;
+    padding: 8px 16px !important;
+    margin: 2px !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Cores específicas para botões de grupos */
+.stButton>button[data-testid*="chip1_0"] {
+    background: linear-gradient(45deg, #FF6B6B, #FF8E8E) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip1_1"] {
+    background: linear-gradient(45deg, #4ECDC4, #6ED5CD) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip1_2"] {
+    background: linear-gradient(45deg, #45B7D1, #6BC5D8) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip1_3"] {
+    background: linear-gradient(45deg, #96CEB4, #A8D5C4) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip1_4"] {
+    background: linear-gradient(45deg, #FFEAA7, #FFF0C7) !important;
+    color: #333 !important;
+}
+
+.stButton>button[data-testid*="chip1_5"] {
+    background: linear-gradient(45deg, #DDA0DD, #E6B8E6) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip1_6"] {
+    background: linear-gradient(45deg, #98D8C8, #A8E0D0) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip1_7"] {
+    background: linear-gradient(45deg, #F7DC6F, #F9E79F) !important;
+    color: #333 !important;
+}
+
+.stButton>button[data-testid*="chip1_8"] {
+    background: linear-gradient(45deg, #85C1E9, #9BC9ED) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip1_9"] {
+    background: linear-gradient(45deg, #F8C471, #FAD7A0) !important;
+    color: #333 !important;
+}
+
+.stButton>button[data-testid*="chip1_10"] {
+    background: linear-gradient(45deg, #BB8FCE, #C9A3D8) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip1_11"] {
+    background: linear-gradient(45deg, #F1948A, #F5A8A0) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip1_12"] {
+    background: linear-gradient(45deg, #F9E79F, #FCF3CF) !important;
+    color: #333 !important;
+}
+
+.stButton>button[data-testid*="chip1_13"] {
+    background: linear-gradient(45deg, #A9DFBF, #B8E6C7) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip1_14"] {
+    background: linear-gradient(45deg, #D5DBDB, #E5E8E8) !important;
+    color: #333 !important;
+}
+
+/* Cores para Alimento 2 */
+.stButton>button[data-testid*="chip2_0"] {
+    background: linear-gradient(45deg, #FF6B6B, #FF8E8E) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip2_1"] {
+    background: linear-gradient(45deg, #4ECDC4, #6ED5CD) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip2_2"] {
+    background: linear-gradient(45deg, #45B7D1, #6BC5D8) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip2_3"] {
+    background: linear-gradient(45deg, #96CEB4, #A8D5C4) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip2_4"] {
+    background: linear-gradient(45deg, #FFEAA7, #FFF0C7) !important;
+    color: #333 !important;
+}
+
+.stButton>button[data-testid*="chip2_5"] {
+    background: linear-gradient(45deg, #DDA0DD, #E6B8E6) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip2_6"] {
+    background: linear-gradient(45deg, #98D8C8, #A8E0D0) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip2_7"] {
+    background: linear-gradient(45deg, #F7DC6F, #F9E79F) !important;
+    color: #333 !important;
+}
+
+.stButton>button[data-testid*="chip2_8"] {
+    background: linear-gradient(45deg, #85C1E9, #9BC9ED) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip2_9"] {
+    background: linear-gradient(45deg, #F8C471, #FAD7A0) !important;
+    color: #333 !important;
+}
+
+.stButton>button[data-testid*="chip2_10"] {
+    background: linear-gradient(45deg, #BB8FCE, #C9A3D8) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip2_11"] {
+    background: linear-gradient(45deg, #F1948A, #F5A8A0) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip2_12"] {
+    background: linear-gradient(45deg, #F9E79F, #FCF3CF) !important;
+    color: #333 !important;
+}
+
+.stButton>button[data-testid*="chip2_13"] {
+    background: linear-gradient(45deg, #A9DFBF, #B8E6C7) !important;
+    color: white !important;
+}
+
+.stButton>button[data-testid*="chip2_14"] {
+    background: linear-gradient(45deg, #D5DBDB, #E5E8E8) !important;
+    color: #333 !important;
+}
+
+/* Sticky Menu Compacto */
+.sticky-menu {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #667eea !important;
+    padding: 0.5rem 1rem !important;
+    z-index: 9999 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease;
+    transform: translateY(-100%);
+    opacity: 0;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.sticky-menu.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.sticky-menu-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.sticky-menu-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2E3440;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.sticky-menu-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.sticky-menu-button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #2E3440;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.sticky-menu-button:hover {
+    background: #f0f0f0;
+    border-color: #667eea;
+}
+
+.sticky-menu-button.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.sticky-menu-clear {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #ff6b6b;
+    background: white;
+    color: #ff6b6b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sticky-menu-clear:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+/* Responsividade para sticky menu */
+@media (max-width: 768px) {
+    .sticky-menu-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .sticky-menu-buttons {
+        justify-content: center;
+    }
+
+    .sticky-menu-button {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+}
